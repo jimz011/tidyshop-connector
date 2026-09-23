@@ -17,6 +17,7 @@ You need:
 - [x] A **hostname**, such as `tidyshop.example.com`, pointing at that machine — or at your
       router, with ports 80/443 forwarded to the reverse proxy.
 - [x] A **reverse proxy** that can get a certificate for it (Let's Encrypt is fine).
+- [x] TidyShop on each phone — it is in [closed beta](../beta.md) for now.
 - [x] A **pairing key**: a random string of at least 12 characters. The install pages show how
       to generate one.
 

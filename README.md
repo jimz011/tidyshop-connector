@@ -10,14 +10,19 @@
 <img width="1024" height="500" alt="TidyShop" src="docs/assets/feature-graphic.png" />
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.jimz011apps.tidyshop">
-    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-         alt="Get it on Google Play"
-         height="80">
+  <a href="mailto:jimz011apps@gmail.com?subject=TidyShop%20beta%20sign-up&body=Hi%2C%20please%20add%20me%20to%20the%20TidyShop%20beta.%0A%0AThe%20Google%20account%20on%20my%20Android%20phone%3A%20">
+    <img src="https://img.shields.io/badge/Join%20the%20beta-Google%20Play-34A853?style=for-the-badge&logo=googleplay&logoColor=white"
+         alt="Join the TidyShop beta"
+         height="44">
   </a>
 </p>
 
-The self-hosted family sharing server for [TidyShop](https://play.google.com/store/apps/details?id=com.jimz011apps.tidyshop),
+> **TidyShop is in closed testing on Google Play.** It needs a few more testers before it can be
+> released publicly. The button opens a sign-up email; once you're added, opt in at the
+> [testing page](https://play.google.com/apps/testing/com.jimz011apps.tidyshop).
+> [How the beta works](https://jimz011.github.io/tidyshop-connector/beta/).
+
+The self-hosted family sharing server for [TidyShop](https://jimz011.github.io/tidyshop-connector/beta/),
 the shopping-list app for Android.
 
 **📖 [Documentation](https://jimz011.github.io/tidyshop-connector/)** — installation with
@@ -110,7 +115,7 @@ invites everyone else with a QR code.
 
 - Docker, or Unraid
 - A hostname and a reverse proxy with a valid HTTPS certificate
-- [TidyShop](https://play.google.com/store/apps/details?id=com.jimz011apps.tidyshop) on each phone
+- [TidyShop](https://jimz011.github.io/tidyshop-connector/beta/) on each phone (currently in closed beta)
 
 ## Building
 

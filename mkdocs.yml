@@ -106,6 +106,7 @@ nav:
   - Home: index.md
   - Getting started:
       - getting-started/index.md
+      - Join the beta: beta.md
       - Docker Compose: getting-started/docker.md
       - Unraid: getting-started/unraid.md
       - Reverse proxy and HTTPS: getting-started/reverse-proxy.md

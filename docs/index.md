@@ -2,12 +2,16 @@
 
 ![TidyShop](assets/feature-graphic.png){ .tidy-hero }
 
-**The self-hosted family sharing server for [TidyShop](https://play.google.com/store/apps/details?id=com.jimz011apps.tidyshop), the shopping-list app for Android.**
+**The self-hosted family sharing server for [TidyShop](beta.md), the shopping-list app for Android.**
 
 TidyShop works on its own, entirely on your phone. The connector is what you add when you want
 the rest of the household on the same lists: one small container, on your own server, holding
 your family's shared lists in a single file. There is no TidyShop cloud, no account with us and
 nothing that phones home.
+
+!!! tip "TidyShop is in closed beta"
+    The app is in closed testing on Google Play and needs a few more testers before its public
+    release. [Join the beta](beta.md) to get it — and to help it get there.
 
 <div class="grid cards" markdown>
 
@@ -84,5 +88,5 @@ A single static Go binary with no dependencies beyond the standard library, a sm
 
 - Docker (or Unraid) on a machine that is always on
 - A hostname and a reverse proxy with a valid HTTPS certificate
-- [TidyShop](https://play.google.com/store/apps/details?id=com.jimz011apps.tidyshop) on every
+- [TidyShop](beta.md) on every
   phone that should share lists
