@@ -22,13 +22,14 @@
 > [testing page](https://play.google.com/apps/testing/com.jimz011apps.tidyshop).
 > [How the beta works](https://jimz011.github.io/tidyshop-connector/beta/).
 
-The self-hosted family sharing server for [TidyShop](https://jimz011.github.io/tidyshop-connector/beta/),
+The self-hosted family sharing server for [TidyShop](https://jimz011.github.io/tidyshop-connector/),
 the shopping-list app for Android.
 
-**📖 [Documentation](https://jimz011.github.io/tidyshop-connector/)** — installation with
-[Docker](https://jimz011.github.io/tidyshop-connector/getting-started/docker/) or on
-[Unraid](https://jimz011.github.io/tidyshop-connector/getting-started/unraid/),
-[reverse proxy setup](https://jimz011.github.io/tidyshop-connector/getting-started/reverse-proxy/),
+**📖 [Documentation](https://jimz011.github.io/tidyshop-connector/)** — the TidyShop docs: the
+[app guide](https://jimz011.github.io/tidyshop-connector/guide/), server installation with
+[Docker](https://jimz011.github.io/tidyshop-connector/server/docker/) or on
+[Unraid](https://jimz011.github.io/tidyshop-connector/server/unraid/),
+[reverse proxy setup](https://jimz011.github.io/tidyshop-connector/server/reverse-proxy/),
 [FAQ](https://jimz011.github.io/tidyshop-connector/faq/) and
 [troubleshooting](https://jimz011.github.io/tidyshop-connector/troubleshooting/).
 
@@ -78,7 +79,7 @@ docker compose up -d
 ```
 
 Then put it behind a reverse proxy with HTTPS — the app does not accept plain-HTTP servers. The
-[full guide](https://jimz011.github.io/tidyshop-connector/getting-started/docker/) covers proxy
+[full guide](https://jimz011.github.io/tidyshop-connector/server/docker/) covers proxy
 networks, Caddy, Nginx, Nginx Proxy Manager, SWAG, Traefik and Cloudflare Tunnel.
 
 ### Unraid
@@ -91,7 +92,7 @@ wget -O /boot/config/plugins/dockerMan/templates-user/my-TidyShop-Connector.xml 
 ```
 
 then **Docker → Add Container → Template: TidyShop-Connector**. See the
-[Unraid guide](https://jimz011.github.io/tidyshop-connector/getting-started/unraid/).
+[Unraid guide](https://jimz011.github.io/tidyshop-connector/server/unraid/).
 
 ### Connect the app
 

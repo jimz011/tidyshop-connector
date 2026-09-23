@@ -11,7 +11,7 @@ the pairing key.
 | `PAIRING_KEY_FILE` | *(none)* | Path of a file containing the pairing key, used when `PAIRING_KEY` is empty. Surrounding whitespace is ignored. The Unraid template sets it to `/data/pairing-key.txt`. |
 | `DATA_FILE` | `/data/state.json` | Where the connector keeps its state. |
 | `PORT` | `8787` | The port the connector listens on inside the container. |
-| `OIDC_ISSUER` | *(none)* | Turns on [single sign-on](../guide/sso.md). The issuer URL; the connector appends `/.well-known/openid-configuration`. Leave unset for device keys only. |
+| `OIDC_ISSUER` | *(none)* | Turns on [single sign-on](sso.md). The issuer URL; the connector appends `/.well-known/openid-configuration`. Leave unset for device keys only. |
 | `OIDC_AUDIENCE` | `tidyshop-android` | The audience an access token must carry. Only used when `OIDC_ISSUER` is set. |
 | `ICON_FILE` | `/data/icon.png` | An image served at `/icon.png`, if the file exists. |
 
@@ -23,7 +23,7 @@ exits.
 
 | Path | Description |
 | --- | --- |
-| `/data` | Persistent state. Must be writable. See [Backups and updates](../guide/maintenance.md). |
+| `/data` | Persistent state. Must be writable. See [Backups and updates](maintenance.md). |
 
 ## Ports
 

@@ -11,7 +11,7 @@ Read this first. TidyShop is **two repositories**. This one is the server.
 | Local checkout | `F:\Android\projects\tidyshop-connector` | `F:\Android\projects\tidyshop` |
 | What it is | The self-hosted family sharing server, one Go binary with only the standard library | The Android app, Kotlin + Jetpack Compose, `com.jimz011apps.tidyshop` |
 | Ships as | `ghcr.io/jimz011/tidyshop-connector`, built by `.github/workflows/docker.yml` | Google Play (closed testing at the moment) |
-| Docs | `docs/`, published to [jimz011.github.io/tidyshop-connector](https://jimz011.github.io/tidyshop-connector/) | `docs/design/` in the app repository: design specs |
+| Docs | `docs/`, published to [jimz011.github.io/tidyshop-connector](https://jimz011.github.io/tidyshop-connector/): **all public TidyShop docs**, app guide included | `docs/design/` in the app repository: design specs only |
 
 The connector started in the app repository under `connector/` and was moved here when it was
 published in September 2026. The app repository no longer contains it. The design specs that
@@ -20,6 +20,18 @@ stayed with the app, in its `docs/design/`.
 
 Because the app repository is private, public docs and READMEs here must not link into it.
 
+## Why the app's user guide is here
+
+The public docs site doubles as the TidyShop documentation hub while the app repository is private:
+`docs/getting-started/`, `docs/guide/` (the app guide), `docs/reference/` (settings map, Android
+permissions, privacy summary, app changelog), `docs/faq.md` and `docs/troubleshooting.md` are about
+the **app**. `docs/server/` is about this connector. The plan is to move the app pages into the app
+repository once it goes public.
+
+When writing or updating app pages, take names and behaviour from the app's code (UI strings live
+inline in `ui/*.kt` in the app repository), not from memory. `docs/reference/app-changelog.md` is
+a copy of the app's `CHANGELOG.md`, so update both together.
+
 ## The contract
 
 The HTTP API in `main.go` is what released apps depend on, and phones in the wild run older
@@ -27,7 +39,7 @@ versions. So:
 
 - **Keep changes backwards compatible.** Add routes and fields. Don't rename or remove them while
   released apps still use them.
-- Document route changes in `docs/reference/api.md` and in `CHANGELOG.md`.
+- Document route changes in `docs/server/api.md` and in `CHANGELOG.md`.
 - A feature that needs the app too lands here first, gets released, and only then gets used by
   the app.
 
@@ -40,7 +52,7 @@ versions. So:
 | `Dockerfile` | Multi-arch build that cross-compiles, with no emulation of the Go toolchain |
 | `compose.yml`, `examples/` | Deployment examples (Compose, Caddy, Nginx) |
 | `unraid/` | Unraid template (Community Applications submission is on hold) |
-| `docs/` + `mkdocs.yml` | MkDocs Material user documentation, deployed by `.github/workflows/docs.yml` |
+| `docs/` + `mkdocs.yml` | MkDocs Material site for the app and the server, deployed by `.github/workflows/docs.yml`. `--strict` plus anchor validation fails the build on any broken link. |
 
 ## Releasing
 

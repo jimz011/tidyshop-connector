@@ -13,7 +13,7 @@ is one of:
 - **A device assertion** — a JWT the phone signs itself with its enrolled EC P-256 key (ES256),
   with `iss` `tidyshop-device`, `aud` `tidyshop-connector`, `kid` set to the device id, `sub` to
   the member's id, and a lifetime of at most five minutes. Each `jti` is accepted once.
-- **An OIDC access token**, when [single sign-on](../guide/sso.md) is on, checked against the
+- **An OIDC access token**, when [single sign-on](sso.md) is on, checked against the
   provider's JWKS for signature, issuer, audience and expiry.
 
 The two are told apart by the `iss` claim. Apart from identity inspection, pairing and enrolment,

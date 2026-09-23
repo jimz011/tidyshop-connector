@@ -1,7 +1,7 @@
-site_name: TidyShop Connector
+site_name: TidyShop
 site_description: >-
-  Documentation for TidyShop Connector — the self-hosted family sharing server for the
-  TidyShop shopping-list app for Android.
+  Documentation for TidyShop, a privacy-first shopping-list app for Android, and the TidyShop
+  Connector, its self-hosted family sharing server.
 site_url: https://jimz011.github.io/tidyshop-connector/
 site_author: Jimz011
 
@@ -12,6 +12,11 @@ edit_uri: edit/main/docs/
 copyright: >-
   Copyright &copy; 2026 Jimz011 &mdash;
   <a href="https://github.com/jimz011/tidyshop-connector/blob/main/LICENSE">MPL-2.0</a>.
+
+# --strict turns these into errors, so a broken #anchor fails the build like a broken page link.
+validation:
+  links:
+    anchors: warn
 
 theme:
   name: material
@@ -107,21 +112,38 @@ nav:
   - Getting started:
       - getting-started/index.md
       - Join the beta: beta.md
-      - Docker Compose: getting-started/docker.md
-      - Unraid: getting-started/unraid.md
-      - Reverse proxy and HTTPS: getting-started/reverse-proxy.md
-      - Connect the app: getting-started/connect-app.md
-  - Guide:
+  - App guide:
       - guide/index.md
-      - Members and invites: guide/members.md
-      - Recovery and the pairing key: guide/recovery.md
-      - Single sign-on: guide/sso.md
-      - Backups and updates: guide/maintenance.md
+      - Lists: guide/lists.md
+      - Items and suggestions: guide/items.md
+      - Sharing: guide/sharing.md
+      - Joining a family: guide/family.md
+      - Notifications: guide/notifications.md
+      - Backup and restore: guide/backup.md
+      - Profile and app lock: guide/security.md
+      - Appearance: guide/appearance.md
+  - Family sharing server:
+      - server/index.md
+      - Install:
+          - Docker Compose: server/docker.md
+          - Unraid: server/unraid.md
+          - Reverse proxy and HTTPS: server/reverse-proxy.md
+          - Connect the app: server/connect-app.md
+      - Running it:
+          - Members and invites: server/members.md
+          - Recovery and the pairing key: server/recovery.md
+          - Single sign-on: server/sso.md
+          - Backups and updates: server/maintenance.md
+      - Reference:
+          - Configuration: server/configuration.md
+          - HTTP API: server/api.md
   - Reference:
       - reference/index.md
-      - Configuration: reference/configuration.md
-      - HTTP API: reference/api.md
-      - Changelog: reference/changelog.md
+      - Settings map: reference/settings.md
+      - Android permissions: reference/permissions.md
+      - Privacy: reference/privacy.md
+      - App changelog: reference/app-changelog.md
+      - Server changelog: reference/changelog.md
   - Help:
       - FAQ: faq.md
       - Troubleshooting: troubleshooting.md

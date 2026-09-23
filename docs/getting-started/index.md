@@ -1,38 +1,71 @@
 # Getting started
 
-Setting up family sharing takes four steps. Most of the time goes into step 2, and if you
-already expose other self-hosted apps over HTTPS it is five minutes of copy and paste.
+From installing the app to ticking off your first item takes about a minute.
 
-1. **Run the container** — with [Docker Compose](docker.md) or on [Unraid](unraid.md).
-2. **Put it behind HTTPS** — a [reverse proxy](reverse-proxy.md) with a real certificate, on a
-   hostname your phones can reach from wherever they are.
-3. **Connect your own phone** with the master pairing key. That makes you the family owner.
-4. **Invite everyone else** with a QR code — [connect the app](connect-app.md).
+## 1. Install TidyShop
 
-## Before you start
+TidyShop is in closed testing on Google Play. [Join the beta](../beta.md), and once you've been
+added, install it from the Play Store like any other app. Updates arrive the same way.
 
-You need:
+You need Android 6.0 or newer.
 
-- [x] A machine that is always on, running Docker or Unraid. A Raspberry Pi 4 is plenty.
-- [x] A **hostname**, such as `tidyshop.example.com`, pointing at that machine — or at your
-      router, with ports 80/443 forwarded to the reverse proxy.
-- [x] A **reverse proxy** that can get a certificate for it (Let's Encrypt is fine).
-- [x] TidyShop on each phone — it is in [closed beta](../beta.md) for now.
-- [x] A **pairing key**: a random string of at least 12 characters. The install pages show how
-      to generate one.
+## 2. Tell TidyShop your name
 
-!!! warning "Plain HTTP will not work"
-    Android blocks unencrypted connections for TidyShop, so `http://192.168.1.10:8787` cannot be
-    used as the server address — not even on your home Wi-Fi. The address you enter in the app
-    must start with `https://` and have a certificate the phone trusts.
+The first screen asks what to call you. That's the whole setup: there's no email, no password and
+no account. Your name is how you appear to the family if you share lists later, and you can change
+it any time under **Profile**.
 
-!!! tip "Only on the home network?"
-    A hostname that only resolves inside your network works, as long as it has a real certificate
-    (for example through a DNS challenge). Lists then sync when phones are home and catch up
-    automatically the next time they are.
+The same screen has a few other ways in:
 
-## Why self-hosted?
+- **Restore a backup**: bring back your lists from a file, your Google Drive or a family server.
+  See [Backup and restore](../guide/backup.md).
+- **Continue with SSO**: only if your household's server uses single sign-on and you were told to
+  use it.
+- **Open pending family invitation**: appears if you opened an invite link before finishing setup.
 
-Shared lists have to live somewhere both phones can reach. Rather than run a service that holds
-every family's shopping habits, TidyShop lets you run that piece yourself. Your data sits in one
-file on your own disk, and nothing about it reaches the developer.
+## 3. Protect it, if you like
+
+Next, TidyShop asks whether it should be locked. **Set a PIN** requires a 4–6 digit PIN, or your
+fingerprint or face once you enable biometrics, before your lists open. **Not now** skips it. You
+can change your mind later under **Profile → Security**.
+
+[:octicons-arrow-right-24: Profile and app lock](../guide/security.md)
+
+## 4. Make your first list
+
+Tap **Create a list**, then choose how to start:
+
+- **Store**: pick your country and the shop. The list gets its name and logo, and you can still
+  edit the name.
+- **Manual**: type a name such as *Weekly groceries* and choose an icon.
+
+Leave the **List type** on **Personal** for now. **Family** lists need a family server; see
+[Joining a family](../guide/family.md).
+
+## 5. Add items
+
+Type in **Add an item…** and press enter or the plus button. Try `2x 500g pasta` or
+`1,5 l milk`: TidyShop splits out the quantity and size by itself. Tap an item to tick it off, and
+it moves down to **Completed**.
+
+[:octicons-arrow-right-24: Items and suggestions](../guide/items.md)
+
+## Where things are
+
+Everything else lives in the **menu** at the top of the home screen:
+
+| Menu item | What's there |
+| --- | --- |
+| **Profile** | Your name and picture, the app lock, and logging out |
+| **Settings** | Theme, colours, font, which list groups show on Home, notifications, and the server and SSO settings |
+| **Backup & restore** | Saving and restoring backups |
+| **Family sharing** | Joining a family server, invites, members and your devices |
+| **About** | What TidyShop is, and how it's made |
+| **Support me** | Ways to support development |
+
+## Next
+
+- [Lists](../guide/lists.md): organise, sort, search and swipe
+- [Joining a family](../guide/family.md): share lists for real
+- Curious first? The Family sharing screen has an [Explore a demo family](../guide/family.md#try-the-demo-family)
+  button that shows sharing without a server.

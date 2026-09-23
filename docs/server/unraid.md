@@ -31,7 +31,7 @@
 | **Pairing key** | A random string of at least 12 characters. Generate one in the Unraid terminal with `openssl rand -hex 24` and paste it in. Keep a copy in your password manager. |
 | **WebUI / API port** | `8787`, unless that port is taken. This is the port your reverse proxy points at. |
 | **Appdata** | `/mnt/user/appdata/tidyshop-connector` — where the connector keeps its state. |
-| **OIDC issuer (optional)** | Leave empty, unless you want [single sign-on](../guide/sso.md). |
+| **OIDC issuer (optional)** | Leave empty, unless you want [single sign-on](sso.md). |
 
 Under **Show more settings** you'll find the OIDC audience, the data file path and the pairing
 key file. You don't need to change them.

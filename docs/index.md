@@ -1,92 +1,94 @@
-# TidyShop Connector
+# TidyShop
 
 ![TidyShop](assets/feature-graphic.png){ .tidy-hero }
 
-**The self-hosted family sharing server for [TidyShop](beta.md), the shopping-list app for Android.**
+**A privacy-first shopping-list app for Android, with optional self-hosted family sharing.**
 
-TidyShop works on its own, entirely on your phone. The connector is what you add when you want
-the rest of the household on the same lists: one small container, on your own server, holding
-your family's shared lists in a single file. There is no TidyShop cloud, no account with us and
-nothing that phones home.
+TidyShop keeps your lists on your phone. You don't need an account, there's no TidyShop cloud, and
+nothing is sent to the developer. When the household should share lists, you run a small server of
+your own, the TidyShop Connector, and every phone syncs through it.
 
 !!! tip "TidyShop is in closed beta"
     The app is in closed testing on Google Play and needs a few more testers before its public
-    release. [Join the beta](beta.md) to get it — and to help it get there.
+    release. [Join the beta](beta.md) to get it, and to help it get there.
 
 <div class="grid cards" markdown>
 
--   :material-docker: **Docker**
+-   :material-rocket-launch: **New here?**
 
     ---
 
-    Any Linux box, NAS or VPS with Docker Compose. One container and one volume.
+    Get the app, pick a name, and make your first list in under a minute.
 
-    [:octicons-arrow-right-24: Install with Docker](getting-started/docker.md)
+    [:octicons-arrow-right-24: Getting started](getting-started/index.md)
 
--   :material-server: **Unraid**
-
-    ---
-
-    Install from Community Applications, or add the template by hand.
-
-    [:octicons-arrow-right-24: Install on Unraid](getting-started/unraid.md)
-
--   :material-lock: **HTTPS**
+-   :material-book-open-variant: **Learn the app**
 
     ---
 
-    The app only talks to HTTPS servers. Nginx, Nginx Proxy Manager, SWAG and Caddy examples.
+    Lists, items, sharing, notifications, backups and app lock, one topic at a time.
 
-    [:octicons-arrow-right-24: Reverse proxy](getting-started/reverse-proxy.md)
+    [:octicons-arrow-right-24: App guide](guide/index.md)
 
--   :material-cellphone-link: **Connect the app**
+-   :material-server: **Run a family server**
 
     ---
 
-    Become the family owner, then invite everyone else with a QR code.
+    Install the connector with Docker or on Unraid, put it behind HTTPS, and invite the family.
 
-    [:octicons-arrow-right-24: Connect the app](getting-started/connect-app.md)
+    [:octicons-arrow-right-24: Family sharing server](server/index.md)
+
+-   :material-help-circle: **Something's wrong**
+
+    ---
+
+    Quick answers, and fixes for the problems people run into most.
+
+    [:octicons-arrow-right-24: FAQ](faq.md) ·
+    [:octicons-arrow-right-24: Troubleshooting](troubleshooting.md)
 
 </div>
 
-## What the connector does
+## What TidyShop does
 
-### Shared lists, live
+### Lists that stay tidy
 
-Family lists sync between every phone in the household. While the app is open, changes arrive
-over a live stream within a second — somebody ticks off the milk in the shop and it disappears
-from your list at home. Item suggestions are learned per list, so the whole family gets the same
-"you usually buy…" pills.
+Keep every shop in its own list: pick the store and TidyShop gives the list its logo, or build one
+by hand with your own icon. Add items by typing or with one tap on a suggestion. Quantities and
+sizes come straight from what you type, so "2x 500g pasta" becomes pasta, ×2, 500 g. Ticked items
+move to *Completed*, and you can swipe between lists without going back.
 
-### Members and permissions
+[:octicons-arrow-right-24: Lists](guide/lists.md) ·
+[:octicons-arrow-right-24: Items and suggestions](guide/items.md)
 
-The first person to connect becomes the **family owner**. Everyone else joins with a
-single-use invite code or QR code. Each list can be shared as **View**, **Check** (tick items off
-but not change them) or **Edit**, per person or for everybody. The owner decides who may invite
-new people and who may link more than one device.
+### Share with the household
 
-### No sign-in required
+Send anyone a copy of a list as a link. No server is needed for that. Or run a family server, and
+lists become shared for real: a change on one phone shows up on the others within a second, and
+each list can be shared as *View*, *Check* (tick items off) or *Edit*. When you need someone to go
+shopping, **Notify family** does the asking.
 
-Each phone creates its own key pair in Android's hardware keystore. The private key never leaves
-the phone; the connector keeps only the public half and checks every request against it. That
-means **no passwords and no identity provider** — though if you already run Authentik or another
-OIDC provider, single sign-on is supported too.
+[:octicons-arrow-right-24: Sharing](guide/sharing.md) ·
+[:octicons-arrow-right-24: Joining a family](guide/family.md)
 
-[:octicons-arrow-right-24: Single sign-on](guide/sso.md)
+### Private by design
 
-### Backups on your own server
+There's no account to create and no password to forget. Each phone makes its own key in its
+hardware keystore when it joins a family, and an optional PIN or fingerprint lock keeps the app
+closed to anyone else holding your phone. There's no analytics, no ads and no crash reporting.
 
-Each member can keep up to 14 backups of their TidyShop data on the connector, next to (not
-instead of) backups to a file or Google Drive.
+[:octicons-arrow-right-24: Profile and app lock](guide/security.md) ·
+[:octicons-arrow-right-24: Privacy](reference/privacy.md)
 
-### Small and boring on purpose
+### Backups where you want them
 
-A single static Go binary with no dependencies beyond the standard library, a small image for
-`amd64` and `arm64`, and one JSON file for state. Back it up by copying one folder.
+Save a backup to a file anywhere your phone can reach, let TidyShop back up daily to your own
+Google Drive, or keep the last 14 backups on your family server.
+
+[:octicons-arrow-right-24: Backup and restore](guide/backup.md)
 
 ## Requirements
 
-- Docker (or Unraid) on a machine that is always on
-- A hostname and a reverse proxy with a valid HTTPS certificate
-- [TidyShop](beta.md) on every
-  phone that should share lists
+- Android 6.0 or newer
+- For family sharing: a [TidyShop Connector](server/index.md) that you, or someone in the family,
+  hosts

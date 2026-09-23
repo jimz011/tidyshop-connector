@@ -21,7 +21,7 @@ connector. You're in.
 !!! warning "Save your recovery code"
     Right after pairing, the app shows a **recovery code** once. Write it down or store it in your
     password manager. It is how this identity gets back in after a reinstall or on a new phone —
-    see [Recovery and the pairing key](../guide/recovery.md).
+    see [Recovery and the pairing key](recovery.md).
 
 ## Invite the rest of the family
 
@@ -37,7 +37,7 @@ can be revoked from the same screen. Nobody but you ever needs the pairing key.
 
 !!! tip "Only the owner invites, by default"
     The owner can let individual members invite people too, with **May invite new members**. See
-    [Members and invites](../guide/members.md).
+    [Members and invites](members.md).
 
 ## Share a list
 

@@ -111,8 +111,8 @@ safe, such as your password manager.
     }
     ```
 
-Want single sign-on? Add `OIDC_ISSUER` to `environment` — see [Single sign-on](../guide/sso.md).
-Every setting is listed in [Configuration](../reference/configuration.md).
+Want single sign-on? Add `OIDC_ISSUER` to `environment` — see [Single sign-on](sso.md).
+Every setting is listed in [Configuration](configuration.md).
 
 ## 3. Start it
 
