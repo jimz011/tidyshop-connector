@@ -1,0 +1,24 @@
+# TidyShop Connector — plain Docker Compose.
+#
+#   mkdir -p ./data && openssl rand -hex 24 > ./data/pairing-key.txt
+#   docker compose up -d
+#
+# The connector must sit behind a reverse proxy that terminates HTTPS: the
+# TidyShop app refuses plain-HTTP servers. See examples/ for Nginx and Caddy.
+services:
+  tidyshop-connector:
+    image: ghcr.io/jimz011/tidyshop-connector:latest
+    container_name: TidyShop-Connector
+    restart: unless-stopped
+    environment:
+      PAIRING_KEY_FILE: /data/pairing-key.txt
+      DATA_FILE: /data/state.json
+      # Optional single sign-on. Leave unset and devices enrol with invite codes.
+      # OIDC_ISSUER: https://auth.example.com/application/o/tidyshop/
+      # OIDC_AUDIENCE: tidyshop-android
+    volumes:
+      - ./data:/data
+    ports:
+      # Only needed when the reverse proxy is NOT on the same Docker network.
+      # Bound to localhost so the unencrypted port is never reachable from outside.
+      - "127.0.0.1:8787:8787"

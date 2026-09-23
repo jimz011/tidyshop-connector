@@ -1,0 +1,42 @@
+/* TidyShop colours on top of the Material theme. */
+
+:root,
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #18342a;
+  --md-primary-fg-color--light: #4d7d63;
+  --md-primary-fg-color--dark: #10251d;
+  --md-accent-fg-color: #4d7d63;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #18342a;
+  --md-primary-fg-color--light: #4d7d63;
+  --md-primary-fg-color--dark: #10251d;
+  --md-accent-fg-color: #8fbfa2;
+  --md-typeset-a-color: #8fbfa2;
+}
+
+.md-typeset .tidy-hero {
+  border-radius: 0.6rem;
+  margin: 0 0 1.6em;
+  width: 100%;
+}
+
+/* The grid-card lists used on the landing and section index pages. */
+.md-typeset .grid.cards > ul > li {
+  border-radius: 0.6rem;
+}
+
+/* Keep long URLs and variable names from stretching the layout on phones. */
+.md-typeset code {
+  overflow-wrap: anywhere;
+}
+
+/* Wide tables scroll inside their own container rather than the page. */
+.md-typeset .md-typeset__table {
+  min-width: 0;
+}
+
+.md-typeset table:not([class]) {
+  font-size: 0.72rem;
+}

@@ -1,0 +1,5 @@
+# Caddy obtains and renews the certificate on its own. Caddy streams responses
+# without buffering, so the live-update route (/v1/events) needs no special block.
+tidyshop.example.com {
+	reverse_proxy TidyShop-Connector:8787
+}

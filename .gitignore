@@ -1,0 +1,9 @@
+# Local state and secrets
+data/
+appdata/
+*.log
+pairing-key.txt
+state.json
+
+# MkDocs output
+site/

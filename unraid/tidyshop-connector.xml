@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>TidyShop-Connector</Name>
+  <Repository>ghcr.io/jimz011/tidyshop-connector:latest</Repository>
+  <Registry>https://github.com/jimz011/tidyshop-connector/pkgs/container/tidyshop-connector</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/jimz011/tidyshop-connector/issues</Support>
+  <Project>https://github.com/jimz011/tidyshop-connector</Project>
+  <Overview>Self-hosted family sharing server for the TidyShop shopping-list app for Android. Shared lists, live updates, household members with per-list permissions, and member backups, all stored on your own server in a single JSON file. Single sign-on (Authentik or any OIDC provider) is optional: phones can enrol with a hardware-backed device key and a single-use invite code instead.&#xD;
+&#xD;
+IMPORTANT: the TidyShop app only talks to HTTPS servers, so put this container behind a reverse proxy (Nginx Proxy Manager, SWAG, Nginx, Caddy...) with a valid certificate. Setup guide: https://jimz011.github.io/tidyshop-connector/</Overview>
+  <Changes>See https://github.com/jimz011/tidyshop-connector/blob/main/CHANGELOG.md</Changes>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8787]/health</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/jimz011/tidyshop-connector/main/unraid/tidyshop-connector.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/jimz011/tidyshop-connector/main/docs/assets/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText>Buy me a coffee</DonateText>
+  <DonateLink>https://www.buymeacoffee.com/w8Jnf6Hit</DonateLink>
+  <Requires>A reverse proxy with a valid HTTPS certificate and a hostname your phones can reach.</Requires>
+  <Config Name="Pairing key" Target="PAIRING_KEY" Default="" Mode="" Description="Master pairing key, at least 12 characters (generate one with: openssl rand -hex 24). It admits the family owner and recovers lost phones, so treat it like an administrator password. Leave empty to read it from the pairing key file instead." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="WebUI / API port" Target="8787" Default="8787" Mode="tcp" Description="Port the connector listens on. Point your reverse proxy here. Do not forward it to the internet directly." Type="Port" Display="always" Required="true" Mask="false">8787</Config>
+  <Config Name="Appdata" Target="/data" Default="/mnt/user/appdata/tidyshop-connector" Mode="rw" Description="Connector state (state.json), and optionally pairing-key.txt and icon.png." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/tidyshop-connector</Config>
+  <Config Name="OIDC issuer (optional)" Target="OIDC_ISSUER" Default="" Mode="" Description="Optional single sign-on. The issuer URL of your OIDC provider, e.g. https://auth.example.com/application/o/tidyshop/ for Authentik. Leave empty to use device keys and invite codes only." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="OIDC audience" Target="OIDC_AUDIENCE" Default="tidyshop-android" Mode="" Description="The OIDC client id the access tokens are issued for. Only used when an issuer is set." Type="Variable" Display="advanced" Required="false" Mask="false">tidyshop-android</Config>
+  <Config Name="Pairing key file" Target="PAIRING_KEY_FILE" Default="/data/pairing-key.txt" Mode="" Description="Used only when the Pairing key variable is empty. Path inside the container of a file holding the key." Type="Variable" Display="advanced" Required="false" Mask="false">/data/pairing-key.txt</Config>
+  <Config Name="Data file" Target="DATA_FILE" Default="/data/state.json" Mode="" Description="Where the connector keeps its state." Type="Variable" Display="advanced" Required="false" Mask="false">/data/state.json</Config>
+</Container>

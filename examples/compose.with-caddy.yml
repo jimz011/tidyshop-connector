@@ -1,0 +1,27 @@
+# Connector plus Caddy, for a machine with no reverse proxy yet.
+# Ports 80 and 443 must be reachable from the internet for Caddy to get a
+# certificate, and tidyshop.example.com (in the Caddyfile) must point here.
+services:
+  tidyshop-connector:
+    image: ghcr.io/jimz011/tidyshop-connector:latest
+    container_name: TidyShop-Connector
+    restart: unless-stopped
+    environment:
+      PAIRING_KEY_FILE: /data/pairing-key.txt
+    volumes:
+      - ./data:/data
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  caddy-data:
+  caddy-config:

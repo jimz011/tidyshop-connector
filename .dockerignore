@@ -1,0 +1,9 @@
+.git
+.github
+data
+docs
+site
+examples
+unraid
+*.md
+*.log
