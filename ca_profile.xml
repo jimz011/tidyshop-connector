@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/jimz011/tidyshop-connector/main/docs/assets/logo.png</Icon>
+  <Profile>Jimz011 builds TidyShop, a shopping-list app for Android, and HKI 7, a Home Assistant client. TidyShop Connector is the self-hosted family sharing server for TidyShop.</Profile>
+  <WebPage>https://jimz011.github.io/tidyshop-connector/</WebPage>
+  <DonateText>Buy me a coffee</DonateText>
+  <DonateLink>https://www.buymeacoffee.com/w8Jnf6Hit</DonateLink>
+</Maintainer>
