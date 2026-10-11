@@ -29,7 +29,7 @@ there, TidyShop says so and offers **Open Android settings**.
 
 | Option | How it works |
 | --- | --- |
-| **Live** | TidyShop keeps its connection to the family server open, so anything new arrives within seconds. Android requires an ongoing notification while it does, and it uses more battery than the other choices. It comes back on by itself after a restart. |
+| **Live** | TidyShop keeps its connection to the family server open, so anything new arrives within seconds. Android requires an ongoing notification while it does, and it uses more battery than the other choices. After a restart, Android 15 and newer won't let it start by itself, so a check every 15 minutes covers you until you open TidyShop, which turns Live back on. |
 | **15 min** · **Hourly** · **3 hours** · **6 hours** · **Daily** | TidyShop checks for changes at about that interval. Android decides exactly when, and never checks more often than every 15 minutes. **Hourly** is the default. |
 | **When opened** | Nothing runs in the background at all. You see what changed the next time you open TidyShop. |
 

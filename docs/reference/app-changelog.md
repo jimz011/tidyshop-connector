@@ -6,7 +6,12 @@
 
 - **Move open items to…** in a list's menu moves everything not yet ticked off to another list,
   for when a shop did not have it. Photo, department, quantity and size go with each item.
+- **Move to…** in an item's menu moves just that item to another list.
 - TidyShop now needs Android 7.0 or newer, as Google Play's automatic protection requires.
+- On Android 15 and newer, Live notifications no longer try to start themselves after a restart,
+  which Android no longer allows. A check every 15 minutes covers you until you next open
+  TidyShop, which starts Live again.
+- Smaller, obfuscated release builds.
 
 ## 1.2.0
 

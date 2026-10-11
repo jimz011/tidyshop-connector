@@ -50,7 +50,9 @@ product. On a personal list, they stay on your phone.
 
 ## Moving items to another list
 
-When a shop did not have something, open the list's **•••** menu and choose **Move open items
+To move one item, open its **•••** menu and choose **Move to…**.
+
+When a shop did not have several things, open the list's **•••** menu and choose **Move open items
 to…**, then the list to move them to. Everything not yet ticked off moves, keeping its photo,
 department, quantity and size; ticked items stay where they are. You can only pick lists you can
 edit.
