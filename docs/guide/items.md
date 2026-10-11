@@ -48,6 +48,13 @@ the family server, shared by the whole household, and the photos are stored ther
 a product's department or photo on one phone changes it for everyone; clearing both forgets the
 product. On a personal list, they stay on your phone.
 
+## Moving items to another list
+
+When a shop did not have something, open the list's **•••** menu and choose **Move open items
+to…**, then the list to move them to. Everything not yet ticked off moves, keeping its photo,
+department, quantity and size; ticked items stay where they are. You can only pick lists you can
+edit.
+
 ## Searching a list
 
 The **⌕** button at the top of a list opens a search field. It filters the list as you type,

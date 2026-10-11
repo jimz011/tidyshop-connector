@@ -2,6 +2,12 @@
 
 <!-- Copied from CHANGELOG.md in the private app repository. Update both together. -->
 
+## 1.2.1
+
+- **Move open items to…** in a list's menu moves everything not yet ticked off to another list,
+  for when a shop did not have it. Photo, department, quantity and size go with each item.
+- TidyShop now needs Android 7.0 or newer, as Google Play's automatic protection requires.
+
 ## 1.2.0
 
 - Lists now read in the order things were added: first added at the top, last added at the bottom.
