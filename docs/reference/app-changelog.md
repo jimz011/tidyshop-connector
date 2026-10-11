@@ -2,6 +2,10 @@
 
 <!-- Copied from CHANGELOG.md in the private app repository. Update both together. -->
 
+## 1.2.2
+
+- Fixes TidyShop closing as soon as it was opened on 1.2.1.
+
 ## 1.2.1
 
 - **Move open items to…** in a list's menu moves everything not yet ticked off to another list,
