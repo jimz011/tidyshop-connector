@@ -89,6 +89,6 @@ Google Drive, or keep the last 14 backups on your family server.
 
 ## Requirements
 
-- Android 6.0 or newer
+- Android 7.0 or newer
 - For family sharing: a [TidyShop Connector](server/index.md) that you, or someone in the family,
   hosts

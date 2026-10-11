@@ -7,7 +7,7 @@ From installing the app to ticking off your first item takes about a minute.
 TidyShop is in closed testing on Google Play. [Join the beta](../beta.md), and once you've been
 added, install it from the Play Store like any other app. Updates arrive the same way.
 
-You need Android 6.0 or newer.
+You need Android 7.0 or newer.
 
 ## 2. Tell TidyShop your name
 
