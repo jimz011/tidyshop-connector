@@ -2,6 +2,11 @@
 
 <!-- Copied from CHANGELOG.md in the private app repository. Update both together. -->
 
+## 1.2.3
+
+- Smaller, obfuscated release builds, as Google Play asks. Every build is now installed on an
+  emulator and opened before it can ship, which would have caught the 1.2.1 crash.
+
 ## 1.2.2
 
 - Fixes TidyShop closing as soon as it was opened on 1.2.1.
