@@ -71,6 +71,23 @@ the caller must already be a member of the household.
 | `GET` | `/v1/admin/lists` | Household owner: every shared list on the server. |
 | `DELETE` | `/v1/admin/lists/{id}` | Household owner: delete any list. |
 
+### Products and photos
+
+Items can carry a `Department` and a `Photo` (the id of an uploaded picture). Saving a list
+remembers every item that has either, by lower-cased name, in a catalogue shared by the household,
+so the app can suggest "Bread" with its aisle and picture while someone types. An item also has a
+`CreatedAt`, so every device keeps a list in the same order. A list saved with `"ItemDetails": true`
+is taken at its word about these fields; a list saved without it (an older app) keeps the
+department, photo and creation time the server already holds.
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| `GET` | `/v1/products` | The household's catalogue: `key`, `name`, `department`, `photo`, `updatedAt`. |
+| `PUT` | `/v1/products/{name}` | Replace one product's `Department` and `Photo`. Both empty removes it. |
+| `DELETE` | `/v1/products/{name}` | Forget one product. |
+| `PUT` | `/v1/photos` | Upload a JPEG as the raw request body, 1 MiB at most. Returns `{"id": "<sha-256>"}`; uploading the same picture twice is harmless. |
+| `GET` | `/v1/photos/{id}` | Download it. Only members of the household that uploaded it can. |
+
 ### Backups
 
 | Method | Path | Purpose |

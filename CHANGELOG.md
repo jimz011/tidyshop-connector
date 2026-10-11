@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.0
+
+- A product catalogue for the household. Items can now carry a department and a photo, and every
+  item saved with either is remembered by name, so the app can suggest it with both attached.
+  New routes: `GET /v1/products`, `PUT` and `DELETE /v1/products/{name}`, `PUT /v1/photos` and
+  `GET /v1/photos/{id}`. Photos are small JPEGs kept in a `photos/` folder next to `state.json`.
+- Items remember when they were added (`CreatedAt`), so a list sorts the same on every phone.
+- Fully backwards compatible: an older app that saves a list does not strip departments or photos.
+
 ## 1.0.0
 
 First public release, published as `ghcr.io/jimz011/tidyshop-connector` for `amd64` and `arm64`.

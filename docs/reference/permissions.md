@@ -1,8 +1,9 @@
 # Android permissions
 
 TidyShop asks Android for as little as it can. There's no camera, contacts, location, storage or
-microphone permission: invite QR codes are scanned with your phone's own camera app, and backup
-files are saved through Android's file picker, which needs no permission.
+microphone permission: invite QR codes are scanned with your phone's own camera app, product photos
+come from Android's photo picker or your camera app, and backup files are saved through Android's
+file picker, none of which needs a permission.
 
 | Permission | Why |
 | --- | --- |

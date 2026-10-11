@@ -19,6 +19,40 @@ fields:
 The units it understands are **ml, cl, l, g, kg, oz, lb** and **pieces**. Both a decimal comma
 and a decimal point work.
 
+## Suggestions while you type
+
+Start typing and TidyShop lists the products it knows that match, for example **br** offers
+**Bread** and **Brie**. Tap one to add it straight away, with the department and photo it was
+saved with. A product is known once it has been on the list before, or once you gave it a
+department or a photo.
+
+If you type a full name that TidyShop already knows and press enter, the department and photo are
+filled in for you as well.
+
+## Department and photo
+
+Under the add field, **Details** opens two optional extras:
+
+- **Department**, where the product lives in the shop: Bakery, Dairy, Frozen. Departments you
+  have used before appear as buttons.
+- **Photo**, taken with your camera (**Take photo**) or picked from your gallery (**Choose**).
+  Photos are shrunk to a small size first. **Remove photo** takes it off again.
+
+You can add or change them later too: press and hold an item, or use **Edit** in its **•••** menu.
+An item with a photo shows it as a small picture, and tapping the picture enlarges it. The
+department is shown under the item's name.
+
+Every product that has a department or a photo is remembered, so the next time you add it the
+details come with it. On a [family list](sharing.md#share-a-family-list) the remembered products live on
+the family server, shared by the whole household, and the photos are stored there too. Changing
+a product's department or photo on one phone changes it for everyone; clearing both forgets the
+product. On a personal list, they stay on your phone.
+
+## Searching a list
+
+The **⌕** button at the top of a list opens a search field. It filters the list as you type,
+matching an item's name or its department. Tap **✕** to close it and see everything again.
+
 ## Ticking things off
 
 - **Tap** an item to tick it off. It's struck through and moves to **Completed**. Tap it again to
@@ -59,5 +93,5 @@ In the list menu, **Quick add settings** controls:
 | Option | Order |
 | --- | --- |
 | **Name** | A–Z, or Z–A when you tap it again |
-| **Added** | Last added first, or first added first when you tap it again |
+| **Added** | First added at the top and last added at the bottom, or the other way round when you tap it again. This is the order new installs start with. |
 | **Custom** | Your own order. Use the arrows on an item to move it. |

@@ -6,7 +6,8 @@ Everything lives in the folder mounted at `/data`:
 
 | File | Contents |
 | --- | --- |
-| `state.json` | The household, members, enrolled device public keys, shared lists, invites, and members' backups. |
+| `state.json` | The household, members, enrolled device public keys, shared lists, the product catalogue, invites, and members' backups. |
+| `photos/` | Product photos, one small JPEG each, in a folder per household. |
 | `pairing-key.txt` | The master pairing key, if you use the file rather than the variable. |
 | `icon.png` | Optional; served at `/icon.png` if present. |
 

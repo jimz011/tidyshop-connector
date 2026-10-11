@@ -2,6 +2,19 @@
 
 <!-- Copied from CHANGELOG.md in the private app repository. Update both together. -->
 
+## 1.2.0
+
+- Lists now read in the order things were added: first added at the top, last added at the bottom.
+  That is the default sort, and in Custom order a new item goes to the bottom too. If you already
+  picked a sort, yours is kept; tap **First added** under **Sort items** to switch.
+- Search inside a list with the new **⌕** button. It matches an item's name or its department.
+- Extra details on an item: a **department** and a **photo**, taken with the camera or picked from
+  the gallery. Add them under **Details** next to the add field, or edit them on an existing item.
+- Products with a department or a photo are remembered. Family lists share that catalogue, and
+  the photos, through the connector (version 1.1.0 or newer); personal lists keep it on the phone.
+- Suggestions while you type: enter **br** and the products you know that match appear, with their
+  department and photo. Tap one to add it with those details attached.
+
 ## 1.1.4
 
 - New application id and package, `com.jimz011apps.tidyshop`. The single sign-on redirect is now
