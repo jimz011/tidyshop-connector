@@ -11,7 +11,6 @@
 - On Android 15 and newer, Live notifications no longer try to start themselves after a restart,
   which Android no longer allows. A check every 15 minutes covers you until you next open
   TidyShop, which starts Live again.
-- Smaller, obfuscated release builds.
 
 ## 1.2.0
 
